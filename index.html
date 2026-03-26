@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f7f5f2;
+      --ink: #1a1a18;
+      --muted: #888880;
+      --rule: #d8d4ce;
+      --hover-bg: #1a1a18;
+      --hover-fg: #f7f5f2;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+      opacity: 0;
+      transform: translateY(14px);
+      animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+    }
+
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    .label {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle {
+      margin-top: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin-bottom: 2rem;
+    }
+
+    .sites {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .site-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.18s ease, color 0.18s ease, padding 0.18s ease;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .site-link:first-child {
+      border-top: 1px solid var(--rule);
+    }
+
+    .site-link:hover {
+      background: var(--hover-bg);
+      color: var(--hover-fg);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-color: var(--hover-bg);
+    }
+
+    .site-link:hover + .site-link {
+      border-top-color: transparent;
+    }
+
+    .site-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .site-name {
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .site-meta {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      transition: color 0.18s ease;
+    }
+
+    .site-link:hover .site-meta {
+      color: #aaa49a;
+    }
+
+    .arrow {
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+
+    .site-link:hover .arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p class="label">Archive</p>
+      <h1>Original NitLyn Sites</h1>
+      <p class="subtitle">A collection of sites from the past.<br>Built with Svelte 3 and love.</p>
+    </header>
+
+    <hr />
+
+    <nav class="sites">
+      <a class="site-link" href="./site-one/">
+        <div class="site-info">
+          <span class="site-name">Site 1</span>
+          <span class="site-meta">May 9th &mdash; 2021</span>
+            <span class="site-meta">Authors: Julian Pitterson, Darwin Garcia, Ryan George</span>
+
+        </div>
+        <span class="arrow">&#x2192;</span>
+      </a>
+      <a class="site-link" href="./site-two/">
+        <div class="site-info">
+          <span class="site-name">Site 2</span>
+          <span class="site-meta">June 21st &mdash; 2021</span>
+          <span class="site-meta">Authors: Julian Pitterson, Darwin Garcia, Ryan George</span>
+        </div>
+        <span class="arrow">&#x2192;</span>
+      </a>
+    </nav>
+
+    <footer>github.io &nbsp;/&nbsp; public archive</footer>
+  </div>
+</body>
+</html>

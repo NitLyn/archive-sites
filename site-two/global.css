@@ -1,0 +1,90 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: white;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+	
+}
+
+@media (prefers-color-scheme: dark) {
+	
+}
+
+@media (prefers-color-scheme: light) {
+	
+}
+
+/*body::-webkit-scrollbar{
+	width: 0.4rem;
+}
+   
+body::-webkit-scrollbar-thumb{
+	background: rgb(0,166,244);
+   	background: linear-gradient(0deg, rgba(0,166,244,1) 35%, rgba(0,255,139,1) 100%);
+}
+
+body .scrollbar-width{
+	width: 0.4rem;
+}
+
+body .scrollbar-color{
+	background: rgb(0,166,244);
+	background: linear-gradient(0deg, rgba(0,166,244,1) 35%, rgba(0,255,139,1) 100%);
+}
+*/
+a:hover {
+	text-decoration: underline;
+}
+
+a{
+	color: rgb(0, 140, 255);
+	text-decoration: none;
+}
+
+a:visited {
+	color: rgb(72, 132, 192);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}

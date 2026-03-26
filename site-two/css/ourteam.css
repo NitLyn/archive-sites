@@ -1,0 +1,11 @@
+body{
+    height: 65rem;
+	max-height: auto;
+	background-color: rgb(17, 15, 87); /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(47, 47, 122), rgb(42, 25, 70));
+}
+
+main{
+	margin-left: 4rem;
+    margin-right: 4rem;
+}

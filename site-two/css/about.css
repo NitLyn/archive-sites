@@ -1,0 +1,109 @@
+html{
+	--bgcolor-normal: linear-gradient(rgb(85, 85, 145), rgb(100, 81, 131));
+	--bgcolor-light: linear-gradient(rgb(102, 228, 211),rgb(84, 197, 109));
+	--bgcolor-dark: linear-gradient(rgb(47, 47, 122), rgb(42, 25, 70));
+}
+
+body{
+	background-color: rgb(17, 15, 87); /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(47, 47, 122), rgb(42, 25, 70));
+}
+
+@media (prefers-color-scheme: dark) {
+	
+}
+
+@media (prefers-color-scheme: light) {
+	
+}
+
+main{
+	margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.header{
+	margin-top: 40px;
+}
+
+li{
+	list-style: none;
+	margin-bottom: 1rem;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.svelte{
+	color: rgb(235, 79, 39);
+	text-decoration: none;
+}
+
+.svelte:visited {
+	color: rgb(230, 124, 98);
+}
+
+.svelte svg{
+	max-width: 35px;
+	max-height: 35px;
+}
+
+.neu{
+	color: rgb(235, 158, 56);
+	text-decoration: none;
+}
+
+.neu svg{
+	max-width: 35px;
+	max-height: 35px;
+}
+
+.neu:visited{
+	color: rgb(226, 181, 121);
+}
+
+.gql{
+	color: rgb(211, 69, 167);
+}
+
+.gql:visited{
+	color: rgb(204, 88, 167);
+}
+
+.gql svg{
+	max-width: 35px;
+	max-height: 35px;
+}
+
+.psql svg{
+	max-width: 35px;
+	max-height: 35px;
+}
+
+
+.mysql svg{
+	max-width: 50px;
+	max-height: 50px;
+}
+
+.mysql{
+	color: rgb(213, 143, 50);
+}
+
+.mysql:visited{
+	color: rgb(248, 175, 79);
+}
+
+.mongo svg{
+	max-width: 35px;
+	max-height: 35px;
+}
+
+.mongo{
+	color: rgb(103, 149, 68);
+}
+
+.mongo:visited{
+	color: rgb(123, 171, 86);
+}
